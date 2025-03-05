@@ -1,8 +1,11 @@
 "use client"
 import { useState } from "react"
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function AvailabilityForm({ userId, initialData }) {
-  const [availability, setAvailability] = useState(initialData)
+
+export default function AvailabilityForm({ userId }) {
+  const [availability, setAvailability] = useState()
   const [errors, setErrors] = useState({})
   const [isSaving, setIsSaving] = useState(false)
   const [saveSuccess, setSaveSuccess] = useState(false)
@@ -282,3 +285,7 @@ export default function AvailabilityForm({ userId, initialData }) {
     </div>
   )
 }
+
+AvailabilityForm.propTypes = {
+  userId: PropTypes.string.isRequired, // Adjust type if needed (string, number, etc.)
+};
