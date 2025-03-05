@@ -1,4 +1,5 @@
 import Link from "next/link"
+import React from "react";
 import { UserIcon, UsersIcon } from "lucide-react"
 
 async function getUsers() {

@@ -1,6 +1,6 @@
 import AvailabilityForm from "@/components/AvailabilityForm";
-
-
+import React from "react";
+import PropTypes from "prop-types";
 
 async function getAvailability(userId) {
   try {
@@ -16,7 +16,7 @@ async function getAvailability(userId) {
 }
 
 
-export default async function AvailabilityPage({ params }) {
+export default async function AvailabilityPage({params}) {
   const { user_id } = params; 
   const avail = await getAvailability(user_id);
 
@@ -27,3 +27,10 @@ export default async function AvailabilityPage({ params }) {
     </div>
   );
 }
+
+
+AvailabilityPage.propTypes = {
+  params: PropTypes.shape({
+    user_id: PropTypes.string.isRequired, // Assuming `user_id` is a string
+  }).isRequired,
+};

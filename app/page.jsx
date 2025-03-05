@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import React from "react";
 import { ArrowRight } from 'lucide-react'
 
 export default function Home() {
