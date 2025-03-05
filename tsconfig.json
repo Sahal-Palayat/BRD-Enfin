@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "components/AvailabilityForm.jsx", "app/user/availability/[user_id]/page.jsx", "app/layout.jsx", "app/not-found.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "", "app/user/availability/[user_id]/page.jsx", "app/layout.jsx", "app/not-found.jsx"],
   "exclude": ["node_modules"]
 }
