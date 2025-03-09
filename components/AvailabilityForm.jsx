@@ -4,8 +4,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-export default function AvailabilityForm({ userId }) {
-  const [availability, setAvailability] = useState()
+export default function AvailabilityForm({ userId, initialData }) {
+  const [availability, setAvailability] = useState(initialData)
   const [errors, setErrors] = useState({})
   const [isSaving, setIsSaving] = useState(false)
   const [saveSuccess, setSaveSuccess] = useState(false)
@@ -286,6 +286,10 @@ export default function AvailabilityForm({ userId }) {
   )
 }
 
+
+
+
 AvailabilityForm.propTypes = {
-  userId: PropTypes.string.isRequired, // Adjust type if needed (string, number, etc.)
+  userId: PropTypes.string.isRequired,  // Adjust type as needed
+  initialData: PropTypes.object,        // Adjust based on actual structure
 };
